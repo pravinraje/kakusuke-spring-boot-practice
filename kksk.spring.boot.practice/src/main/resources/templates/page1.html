@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="./js/lib/jquery-ui/themes/smoothness/jquery-ui.css" th:href="{/js/lib/jquery-ui/themes/smoothness/jquery-ui.css}" />
+<script type="text/javascript" src="./js/common.js" th:src="@{/js/local/common.js}"></script>
+<script type="text/javascript" data-main="./js/page1" src="./js/lib/requirejs/require.js" th:src="@{/js/lib/requirejs/require.js}"></script>
+<title>Page 1</title>
+</head>
+<body>
+	<div>page 1</div>
+	<div th:text="${message} + ' - 1'">Message is here!</div>
+	<div id="message"></div>
+</body>
+</html>
