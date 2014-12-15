@@ -22,6 +22,12 @@ public class MainController {
 		return "page2";
 	}
 
+	@RequestMapping("/admin")
+	public String admin(Model model) {
+		model.addAttribute("message", "Message 2");
+		return "actuator";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(MainController.class, args);
 	}
