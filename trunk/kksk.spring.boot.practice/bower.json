@@ -1,0 +1,16 @@
+{
+  "name": "SpringBootPractice",
+  "version": "0.0.1",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "jquery-ui": "*",
+    "requirejs": "*",
+    "json2": "*"
+  }
+}
