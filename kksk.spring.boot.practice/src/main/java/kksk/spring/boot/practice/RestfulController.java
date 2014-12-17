@@ -1,12 +1,10 @@
 package kksk.spring.boot.practice;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@EnableAutoConfiguration
 public class RestfulController {
 
 	@RequestMapping(value = "/restSample", method = RequestMethod.POST)

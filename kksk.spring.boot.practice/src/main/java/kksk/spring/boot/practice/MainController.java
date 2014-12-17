@@ -1,15 +1,10 @@
 package kksk.spring.boot.practice;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@EnableAutoConfiguration
-@ComponentScan
 public class MainController {
 
 	@RequestMapping("/p1")
@@ -33,10 +28,4 @@ public class MainController {
 	public String admin() {
 		return "actuator";
 	}
-
-	public static void main(String[] args) {
-		//Object[] controllers = { MainController.class, RestfulController.class };
-		SpringApplication.run(MainController.class, args);
-	}
-
 }
