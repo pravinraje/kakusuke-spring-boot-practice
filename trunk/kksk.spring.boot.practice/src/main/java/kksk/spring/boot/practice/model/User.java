@@ -6,9 +6,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.springframework.util.Base64Utils;
+import lombok.Data;
 
 @Entity
+@Data
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 8589006495506400803L;
@@ -19,35 +20,4 @@ public class User implements Serializable {
 
 	@Column(nullable = false)
 	private String password;
-
-	protected User() {
-	}
-
-	public User(String name) {
-		password = new String(Base64Utils.encode(name.getBytes()));
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		if (password == null)
-			password = new String(Base64Utils.encode(name.getBytes()));
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return getName() + "\t" + getPassword();
-	}
 }
