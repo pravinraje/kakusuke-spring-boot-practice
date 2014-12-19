@@ -2,12 +2,7 @@ package kksk.spring.boot.practice.repository;
 
 import kksk.spring.boot.practice.model.User;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends Repository<User, Long> {
-	Page<User> findAll(Pageable pageable);
-
-	User findByName(String name);
+public interface UserRepository extends JpaRepository<User, String> {
 }
