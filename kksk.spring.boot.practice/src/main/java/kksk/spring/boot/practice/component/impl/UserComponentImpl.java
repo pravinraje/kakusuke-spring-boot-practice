@@ -29,7 +29,7 @@ class UserComponentImpl implements UserComponent {
 	@Override
 	public User findUserByName(String name) {
 		Assert.notNull(name, "Name must not be null");
-		return userRepository.findByName(name);
+		return userRepository.findOne(name);
 	}
 
 	@Override
