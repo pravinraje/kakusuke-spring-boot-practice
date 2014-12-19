@@ -36,7 +36,10 @@ class UserComponentImpl implements UserComponent {
 	public boolean login(String name, String password) {
 		Assert.notNull(name, "Name must not be null");
 		Assert.notNull(password, "Password must not be null");
-		return password.equals(findUserByName(name).getPassword());
+		User user = findUserByName(name);
+		if (user == null)
+			return false;
+		return password.equals(user.getPassword());
 	}
 
 }
